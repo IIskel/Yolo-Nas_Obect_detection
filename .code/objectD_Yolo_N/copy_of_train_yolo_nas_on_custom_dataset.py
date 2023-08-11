@@ -8,14 +8,15 @@ Original file is located at
 """
 
 !nvidia-smi
-
+!PYTORCH_CUDA_ALLOC_CONF=max_split_size_mb:32  #to overcome cuda's memory allocation
 """## Install YOLO-NAS
 
 """
 
-!pip install -q super-gradients==3.1.1
+!pip install -q super-gradients
 !pip install -q roboflow
 !pip install -q supervision
+!pip install ultralytics==8.0.134
 
 import os
 HOME = os.getcwd()
@@ -223,7 +224,7 @@ train_params = {
     ],
     "metric_to_watch": 'mAP@0.50'
 }
-
+torch. cuda. empty_cache() #empty cuda's cache
 """### Train the model"""
 
 trainer.train(
