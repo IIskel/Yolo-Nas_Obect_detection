@@ -54,12 +54,12 @@ Let's make sure that we have access to GPU. We can use `nvidia-smi` command to d
 # #!pip install -q roboflow
 # #!pip install -q supervision
 # 
-# %%capture
-# !pip install super-gradients==3.2.0
-# !pip install imutils
-# !pip install roboflow
-# !pip install pytube --upgrade
-# !pip install supervision
+ %%capture
+ !pip install super-gradients==3.2.0
+ !pip install imutils
+ !pip install roboflow
+ !pip install pytube --upgrade
+ !pip install supervision
 
 """### 🚨 Restart the runtime
 
